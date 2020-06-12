@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/pantalla-inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{Accion}} {{CUObject}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Ingrese lo que se indica
+      </ion-card-title>
+      <ion-card-subtitle>
+        Esto modifica elementos
+      </ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card-content>
+    <ion-list>
+      <ion-list-header>
+        <h1>
+          <ion-icon name="document-text"></ion-icon>
+          Nombre del elemento
+        </h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-icon name="ellipsis-horizontal" style="margin-right: 10x;"></ion-icon>
+        <h1>
+          <ion-input [(ngModel)]="nombre" type="text" required></ion-input>
+        </h1>
+      </ion-item>
+      <ion-list-header>
+        <h1>
+          <ion-icon name="musical-notes"></ion-icon>
+          Audio
+        </h1>
+        <ion-input  type="file" (change)="onSoundSelected($event)" accept="audio/*"></ion-input>
+      </ion-list-header>
+
+      <ion-list-header>
+        <h1>
+          <ion-icon name="image"></ion-icon>
+          Imagen
+        </h1>
+        <ion-input  type="file" (change)="onImageSelected($event)" accept="image/*"></ion-input>
+      </ion-list-header>
+    </ion-list>
+
+    <ion-button shape="round" color="success" (click)="onGuardar()">{{Accion}}</ion-button>
+  </ion-card-content>
+</ion-content>

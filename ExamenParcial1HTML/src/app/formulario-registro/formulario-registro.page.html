@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registrar correo</ion-title>
+  </ion-toolbar>
+</ion-header>
+<script src="../scripts/registro.js"></script>
+<ion-content>
+  <ion-item>
+    <ion-label>
+      Correo
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="user.correo"></ion-input>
+  </ion-item>
+    <ion-item>
+      <ion-label>
+        Password
+      </ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+    <div id="container">
+        <ion-button (click)="onRegistrar()">Registrar Correo</ion-button>
+    </div>
+</ion-content>

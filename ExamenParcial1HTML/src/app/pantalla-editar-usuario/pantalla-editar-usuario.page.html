@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-title>
+      Editar Usuario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-button (click)="Volver()">
+      <ion-icon size="small" slot="icon-only" name="chevron-back-outline"></ion-icon>
+      &nbsp;Volver
+    </ion-button>
+  </ion-item>
+  <ion-card>
+    <span>
+      <ion-card-header>
+        <ion-card-title>Editar Usuario </ion-card-title>
+        <ion-card-subtitle>Porfavor, Edite su perfil</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-input type="text" [(ngModel)]="user.nombre">Nombre</ion-input>
+        <ion-input type="text" [(ngModel)]="user.apellido">Apellido</ion-input>
+        <ion-input type="text"  [(ngModel)]="user.genero">Genero</ion-input>
+      </ion-card-content>
+      <ion-button color="warning" (click)="Actualizar()">Actualizar</ion-button>
+    </span>
+    
+  </ion-card>
+
+    
+    
+</ion-content>

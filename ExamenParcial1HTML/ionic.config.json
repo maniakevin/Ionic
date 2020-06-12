@@ -1,0 +1,7 @@
+{
+  "name": "ExamenParcial1HTML",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar-Imagen</ion-title>
+  </ion-toolbar>
+  <ion-button (click)="Volver()">
+    <ion-icon size="small" slot="icon-only" name="chevron-back-outline"></ion-icon>
+    &nbsp;Volver
+  </ion-button>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label>
+      Subir Imagen
+    </ion-label>
+    <ion-input type="file" (change)="onImageSelected($event)" accept="image/*"></ion-input> <!--[(ngModel)]="user.correo"-->
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      Subir Audio
+    </ion-label>
+    <ion-input type="file" (change)="onSoundSelected($event)" accept="audio/*" ></ion-input> <!--[(ngModel)]="user.correo"-->
+  </ion-item>
+</ion-content>

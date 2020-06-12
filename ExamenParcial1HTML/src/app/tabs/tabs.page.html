@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title >Bienvenido {{user.nombre}}!</ion-title><!--{{user.correo}}-->
+  </ion-toolbar>
+  <ion-button (click)="onSalir()">Cerrar Sesion</ion-button>
+</ion-header>
+<ion-content>
+  
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="pantalla-inicio">
+        <ion-icon name="speedometer"></ion-icon>
+        <ion-label>Letras</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="pantalla-numeros">
+        <ion-icon name="list"></ion-icon>
+        <ion-label>numeros</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+    <ion-fab vertical="top" horizontal="end" slot="fixed">
+      <ion-fab-button  color="primary" (click)="EditarUsuario()"><ion-icon  name="ellipsis-vertical-outline" ></ion-icon></ion-fab-button>
+    </ion-fab>
+  </ion-tabs>
+</ion-content>
